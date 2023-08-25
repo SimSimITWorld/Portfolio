@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+.header {
+	background: url('/Portfolio/img/20230825_003317.jpg') rgba(0, 0, 0, 0.3);
+	background-blend-mode: multiply;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: gray;
+	height: 500px;
+	font-family: 'Zen Maru Gothic', sans-serif;
+}
+
+@media(max-width: 1200px){
+	.sidebar{
+		background-color: rgba(255, 255, 255, 0.15);
+		background-filter: blur(10px);
+	}
+}
