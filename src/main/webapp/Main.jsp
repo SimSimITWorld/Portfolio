@@ -16,6 +16,9 @@
 <body class="vh-100 overflow-hidden">
 <%
 	String id = null;
+	if(session.getAttribute("id")!=null){
+		id = (String)session.getAttribute("id");
+	}
 %>
 <!-- header --> 
 <div class="header">
@@ -57,7 +60,7 @@
           <!-- login / sign up -->
           <% if(id == null){%>
           <div class="d-flex justify-content-center align-items-center gap-3">
-          	<a href="#login" class="text-white">ログイン</a>
+          	<a href="login.jsp" class="text-white">ログイン</a>
           	<a href="#signup" class="text-white text-decoration-none px-3 py-1 rounded-4" style="background-color: gray">同録する</a>
           </div>
           <%}else{ %>
