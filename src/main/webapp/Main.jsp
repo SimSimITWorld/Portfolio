@@ -14,7 +14,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400;600;700;800;900&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
 </head>
 <body class="vh-100 overflow-hidden">
-<!-- navbar -->
+<%
+	String id = null;
+%>
+<!-- header --> 
 <div class="header">
 <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
   <div class="container">
@@ -52,22 +55,44 @@
         </ul>
           <br><hr>
           <!-- login / sign up -->
+          <% if(id == null){%>
           <div class="d-flex justify-content-center align-items-center gap-3">
           	<a href="#login" class="text-white">ログイン</a>
           	<a href="#signup" class="text-white text-decoration-none px-3 py-1 rounded-4" style="background-color: gray">同録する</a>
           </div>
+          <%}else{ %>
+          <div class="d-flex justify-content-center align-items-center gap-3">
+          	<h2><%=id %>様ようこそ</h2>
+          	<a href="#logout" class="text-white text-decoration-none px-3 py-1 rounded-4" style="background-color: gray">ログアウト</a>
+          </div>
+          <% } %>
       </div>
     </div>
   </div>
 </nav>
-<br>
+<br><br>
 <main>
 	<section class="d-flex flex-column justify-content-top align-items-center text-white fs-5">
-		<h1>ーシムギュホー</h1><br>
-		<h1>開発者ポートフォリオ</h1>
+		<div style="line-height: 100%; font-size: 120%; font-weight: bolder;" align="center">
+			<h1>- シムギュホ -</h1><br>
+			<h1>開発者ポートフォリオ</h1>
+		</div>
+	</section>
+	<section class="d-flex flex-column justify-content-top align-items-center text-white fs-5">
+		<div style= "color: orange;" align="center">
+			<h1 style="font-size: 500%; line-height: 30%;">-</h1><br>
+		</div>
+	</section>
+	<section class="d-flex flex-column justify-content-top align-items-center text-white fs-3">
+		<div style="line-height: 70%; font-size: 70%" align="center">
+			<h3>コミュニケーションの大切さを忘れずに</h3><br>
+			<h3>自分の実力を発展し,</h3><br>
+			<h3>危険を機会に変わるのが私の長所です。</h3><br>
+		</div>
 	</section>
 </main>
 </div>
+<!-- About Me -->
 <div>
 ㅎㅇ
 </div>
