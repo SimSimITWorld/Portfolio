@@ -65,7 +65,7 @@
           	<h2><%=id %>様ようこそ</h2>
           	<a href="#logout" class="text-white text-decoration-none px-3 py-1 rounded-4" style="background-color: gray">ログアウト</a>
           </div>
-          <% } %>
+          <% } %> 
       </div>
     </div>
   </div>
