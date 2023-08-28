@@ -10,17 +10,7 @@ body {
     background: #f5f6f7;
     font-family: Dotum,'돋움',Helvetica,sans-serif;
 }
-#logo {
-    width: 100px;
-    height: 60px;
-    cursor: pointer;
-}
 
-#header {
-    padding-top: 62px;
-    padding-bottom: 20px;
-    text-align: center;
-}
 #wrapper {
     position: relative;
     height: 100%;
@@ -76,11 +66,7 @@ input {
     padding-right: 110px;
 }
 
-.box.int_pass {
-    padding-right: 40px;
-}
-
-.box.int_pass_check {
+.box.int_password {
     padding-right: 40px;
 }
 
@@ -93,7 +79,7 @@ input {
     color: #8e8e8e;
 }
 
-.pswdImg {
+.passwordImg {
     width: 18px;
     height: 20px;
     display: inline-block;
@@ -102,32 +88,6 @@ input {
     right: 16px;
     margin-top: -10px;
     cursor: pointer;
-}
-
-#bir_wrap {
-    display: table;
-    width: 100%;
-}
-
-#bir_yy {
-    display: table-cell;
-    width: 147px;
-    
-}
-
-#bir_mm {
-    display: table-cell;
-    width: 147px;
-    vertical-align: middle;
-}
-
-#bir_dd {
-    display: table-cell;
-    width: 147px;
-}
-
-#bir_mm, #bir_dd {
-    padding-left: 10px;
 }
 
 select {

@@ -61,7 +61,7 @@
           <% if(id == null){%>
           <div class="d-flex justify-content-center align-items-center gap-3">
           	<a href="login.jsp" class="text-white">ログイン</a>
-          	<a href="#signup" class="text-white text-decoration-none px-3 py-1 rounded-4" style="background-color: gray">同録する</a>
+          	<a href="/Portfolio/Register/Register.jsp" class="text-white text-decoration-none px-3 py-1 rounded-4" style="background-color: gray">同録する</a>
           </div>
           <%}else{ %>
           <div class="d-flex justify-content-center align-items-center gap-3">
