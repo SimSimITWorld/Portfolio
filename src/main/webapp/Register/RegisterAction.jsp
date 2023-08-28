@@ -16,27 +16,28 @@
 </head>
 <body>
 <%
-	String id = request.getParameter("id");
-	String password = request.getParameter("password");
-	String nickname = request.getParameter("nickname");
+	String id = null;
+	String password = null;
+	String nickname = null;
 	
-	if(session.getAttribute("id") != null){
-		id=(String)session.getAttribute("id");
+	if(request.getParameter("id") != null){
+		id=request.getParameter("id");
 	}
-	if(session.getAttribute("password") != null){
-		password=(String)session.getAttribute("password");
+	if(request.getParameter("password") != null){
+		password=request.getParameter("password");
 	}
-	if(session.getAttribute("nickname") != null){
-		nickname=(String)session.getAttribute("nickname");
+	if(request.getParameter("nickname") != null){
+		nickname=request.getParameter("nickname");
 	}
 	
-	RegisterVO register1 = new RegisterVO();
-	register1.setId(id);
-	register1.setPassword(password);
-	register1.setNickname(nickname);
+	RegisterVO data = new RegisterVO();
+	data.setId(request.getParameter("id"));
+	data.setPassword(request.getParameter("password"));
+	data.setNickname(request.getParameter("nickname"));
 	
-	RegisterDAO register2 = new RegisterDAO();
-	register2.register(register1);
+	RegisterDAO Register = new RegisterDAO();
+	Register.register(data);
+
 	
 	if (id != null){
         PrintWriter script = response.getWriter();

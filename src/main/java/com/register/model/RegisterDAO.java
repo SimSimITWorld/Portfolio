@@ -22,7 +22,7 @@ public class RegisterDAO {
 		
 		Connection conn = null;
 		PreparedStatement pstmt = null;
-		String sql = "insert into register values (?, ?, ?)";
+		String sql = "INSERT INTO REGISTER VALUES (?, ?, ?)";
 		try {
 			conn = ConnUtil.getConnection();
 			pstmt = conn.prepareStatement(sql);
@@ -32,6 +32,9 @@ public class RegisterDAO {
 			return pstmt.executeUpdate();
 		}catch(Exception e) {
 			e.printStackTrace();
+		}finally {
+			try {if(conn!=null) {conn.close();}}catch(Exception e) {e.printStackTrace();}
+			try {if(pstmt!=null) {pstmt.close();}}catch(Exception e) {e.printStackTrace();}
 		}
 		return -1;
 	}
