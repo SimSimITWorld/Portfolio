@@ -24,4 +24,6 @@ public class RegisterVO {
 	public void setNickname(String nickname) {
 		this.nickname = nickname;
 	}
+	
+	
 }

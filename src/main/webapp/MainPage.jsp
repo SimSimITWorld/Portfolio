@@ -16,8 +16,12 @@
 <body class="vh-100 overflow-hidden">
 <%
 	String id = null;
+	String nickname = null;
 	if(session.getAttribute("id")!=null){
 		id = (String)session.getAttribute("id");
+	}
+	if(session.getAttribute("nickname")!=null){
+		nickname = (String)session.getAttribute("nickname");
 	}
 %>
 <!-- header --> 
@@ -65,8 +69,8 @@
           </div>
           <%}else{ %>
           <div class="d-flex justify-content-center align-items-center gap-3">
-          	<h2><%=id %>様ようこそ</h2>
-          	<a href="#logout" class="text-white text-decoration-none px-3 py-1 rounded-4" style="background-color: gray">ログアウト</a>
+          	<h2 style="color: white; font-size: 120%; margin-top: 3%"><%=nickname %> 様ようこそ</h2>
+          	<a href="/Portfolio/Logout/Logout.jsp" class="text-white text-decoration-none px-3 py-1 rounded-4" style="background-color: gray">ログアウト</a>
           </div>
           <% } %> 
       </div>
