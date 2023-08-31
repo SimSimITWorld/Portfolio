@@ -1,10 +1,14 @@
+<%@page import="com.login.model.ConnUtil"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="java.sql.Connection"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import=  "com.register.model.RegisterVO" %>
-<%@ page import = "com.register.model.RegisterDAO" %>
+<%@ page import=  "com.login.model.LoginVO" %>
+<%@ page import = "com.login.model.LoginDAO" %>
 <%@ page import = "java.io.PrintWriter" %>
 <% request.setCharacterEncoding("UTF-8"); %>
-<jsp:useBean id="join" class="com.register.model.RegisterVO" scope="application" />
+<jsp:useBean id="login" class="com.login.model.LoginVO" scope="application" />
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,28 +20,63 @@
 	String id = request.getParameter("id");
 	String password = request.getParameter("password");
 	String nickname = request.getParameter("nickname");
+
+	login.setId(id);
+	login.setPassword(password);
 	
-	join.setId(id);
-	join.setPassword(password);
-	join.setNickname(nickname);
-	
-	session.setAttribute("nickname", nickname);
-	
-	RegisterDAO registerPro = new RegisterDAO();
-    int result = registerPro.register(join);
-    if (result == -1){ // 회원가입 실패시
+	LoginDAO LoginPro = new LoginDAO();
+    int result = LoginPro.Login(login, password);
+    
+    Connection conn = null;
+    PreparedStatement pstmt = null;
+    ResultSet rs = null;
+    String sql = "SELECT NICKNAME FROM PORTFOLIO_MEMBER WHERE ID=?";
+    try{
+    	conn = ConnUtil.getConnection();
+    	pstmt = conn.prepareStatement(sql);
+    	pstmt.setString(1, id);
+    	rs = pstmt.executeQuery();
+    	if(rs.next()){
+    		nickname = rs.getString("nickname");
+    		login.setNickname(nickname);
+    	}
+    }catch(Exception e){
+    	e.printStackTrace();
+    }finally{
+    	try{if(conn!=null){conn.close();}}catch(Exception e){e.printStackTrace();}
+    	try{if(pstmt!=null){pstmt.close();}}catch(Exception e){e.printStackTrace();}
+    	try{if(rs!=null){rs.close();}}catch(Exception e){e.printStackTrace();}
+    }
+    
+    if(result == 0){
+    	PrintWriter script = response.getWriter();
+        script.println("<script>");
+        script.println("alert('パスワードを再び確認してください。')");
+        script.println("history.back()");    // 前のページへユーザーを送る
+        script.println("</script>");
+        script.close();
+    }else if (result == -1){ // 
         PrintWriter script = response.getWriter();
         script.println("<script>");
-        script.println("alert('もう存在しているIDです。')");
-        script.println("history.back()");    // 이전 페이지로 사용자를 보냄
+        script.println("alert('IDを再び確認してください。')");
+        script.println("history.back()");    // 前のページへユーザーを送る
         script.println("</script>");
         script.close();
         return;
-    }else{ // 회원가입 성공시
-        session.setAttribute("id", join.getId()); // 추가
-        PrintWriter script = response.getWriter();
+    }else if(result == -2){
+    	PrintWriter script = response.getWriter();
         script.println("<script>");
-        script.println("location.href = '/Portfolio/MainPage.jsp'");    // 메인 페이지로 이동
+        script.println("alert('データベースにエラーが発生しました。')");
+        script.println("history.back()");    // 前のページへユーザーを送る
+        script.println("</script>");
+        script.close();
+        return;
+    }else{ // ログインを成功した場合
+        PrintWriter script = response.getWriter();
+    	session.setAttribute("id", id);
+    	session.setAttribute("nickname", login.getNickname());
+        script.println("<script>");
+        script.println("location.href = '/Portfolio/MainPage.jsp'");    // メインページへ
         script.println("</script>");     
     }
 %>

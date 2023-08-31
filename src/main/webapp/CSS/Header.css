@@ -18,3 +18,26 @@
 		backdrop-filter: blur(10px);
 	}
 }
+
+.scroll_box {
+	overflow-y: scroll;
+	height: 100%;
+}
+
+.scroll_box::-webkit-scrollbar {
+	width: 10px;
+}
+
+.scroll_box::-webkit-scrollbar-thumb {
+	height: 30%;
+	background: #848484;
+	border-radius: 10px;
+}
+
+.scroll_box::-webkit-scrollbar-track {
+	background: #84848447;
+}
+
+.scroll_box:hover {
+	background-color: white;
+}

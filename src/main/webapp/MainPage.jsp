@@ -8,8 +8,12 @@
 <title>ようこそ！ジュニア開発者SimGyuHoページへ！</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="CSS/Header_Style.css" />
+<link rel="stylesheet" href="CSS/Header.css" />
 <link rel="stylesheet" href="CSS/AboutMe.css" />
+<link rel="stylesheet" href="CSS/Skills.css" />
+<link rel="stylesheet" href="CSS/Archiving.css" />
+<link rel="stylesheet" href="CSS/Project.css" />
+<link rel="stylesheet" href="CSS/Career.css" />
 <!-- font -->
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400;600;700;800;900&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
 </head>
@@ -24,6 +28,7 @@
 		nickname = (String)session.getAttribute("nickname");
 	}
 %>
+<div class="scroll_box">
 <!-- header --> 
 <div class="header">
 <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
@@ -82,7 +87,7 @@
 	<section class="d-flex flex-column justify-content-top align-items-center text-white fs-5">
 		<div style="line-height: 100%; font-size: 120%; font-weight: bolder;" align="center">
 			<h1>- シムギュホ -</h1><br>
-			<h1>開発者ポートフォリオ</h1>
+			<h1>バックエンド開発者</h1>
 		</div>
 	</section>
 	<section class="d-flex flex-column justify-content-top align-items-center text-white fs-5">
@@ -100,8 +105,35 @@
 </main>
 </div>
 <!-- About Me -->
-<div>
-ㅎㅇ
+<div class="aboutme">
+<nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+	gd
+</nav>
+</div>
+<!-- Skills -->
+<div class="skills">
+<nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+	gd
+</nav>
+</div>
+<!-- Archiving -->
+<div class="archiving">
+<nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+	gd
+</nav>
+</div>
+<!-- Project -->
+<div class="project">
+<nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+	gd
+</nav>
+</div>
+<!-- Career -->
+<div class="career">
+<nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+	d
+</nav>
+</div>
 </div>
 </body>
 </html>

@@ -1,14 +1,13 @@
 @charset "UTF-8";
 
-.aboutme {
-	background: rgba(247, 244, 242, 1);
+.project {
+	background: rgba(197, 237, 201, 1);
 	background-blend-mode: multiply;
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-color: rgba(247, 244, 242, 1);
+	background-color: rgba(197, 237, 201, 1);
 	height: 500px;
 	font-family: 'Zen Maru Gothic', sans-serif;
 	font-weight: bold;
 }
-

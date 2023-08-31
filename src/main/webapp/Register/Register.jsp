@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>ギュホONLINE会員登録</title>
-<link rel="stylesheet" href="../Register/Register_CSS.css">
+<link rel="stylesheet" href="../CSS/Register_CSS.css">
 <link rel="stylesheet" href="./CSS/bootstrap.min.css">
 <!-- font -->
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400;600;700;800;900&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
@@ -58,6 +58,6 @@
 		</div>
 	</div>
 </form>
-<script src="Register_JS.js"></script>
+<script src="../JS/Register_JS.js"></script>
 </body>
 </html>
