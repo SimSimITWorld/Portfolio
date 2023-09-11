@@ -30,7 +30,7 @@
 %>
 <div class="scroll_box">
 <!-- header --> 
-<div class="header">
+<div class="header" id="header">
 <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
   <div class="container">
   	<!-- logo -->
@@ -133,8 +133,12 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
 	d
 </nav>
+<a class="up" id="up" style="display:scroll; position:fixed; bottom:90px; right:25px; opacity: 70%;" rel="nofollow"
+href="#header" title="Back to Top" style="font-size:2em"><img src="/Portfolio/img/up.png" border="0" style="height: 50px;"/></a>
+
+<a class="down" id="down" style="display:scroll; position:fixed; bottom:30px; right:25px; opacity: 70%;" rel="nofollow"
+href="#career" title="Back to Top" style="font-size:2em"><img src="/Portfolio/img/down.png" border="0" style="height: 50px;"/></a>
 </div>
 </div>
 </body>
-<script type="text/javascript" src="/Portfolio/JS/AboutMe_JS.js"></script>
 </html>

@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+* {
+    scroll-behavior: smooth;
+}
+
 .header {
 	background: url('/Portfolio/img/20230825_003317.jpg') rgba(0, 0, 0, 0.3);
 	background-blend-mode: multiply;
@@ -38,6 +42,14 @@
 	background: #84848447;
 }
 
-.scroll_box:hover {
-	background-color: white;
+.up img:hover {
+	transform: scale(1.05);
+  	transition: transform 1s;
+  	filter: brightness(70%);
+}
+
+.down img:hover {
+	transform: scale(1.05);
+  	transition: transform 1s;
+  	filter: brightness(70%);
 }
