@@ -105,35 +105,36 @@
 </main>
 </div>
 <!-- About Me -->
-<div class="aboutme">
+<div class="aboutme" id="aboutme">
 <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
 	gd
 </nav>
 </div>
 <!-- Skills -->
-<div class="skills">
+<div class="skills" id="skills">
 <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
 	gd
 </nav>
 </div>
 <!-- Archiving -->
-<div class="archiving">
+<div class="archiving" id="archiving">
 <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
 	gd
 </nav>
 </div>
 <!-- Project -->
-<div class="project">
+<div class="project" id="project">
 <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
 	gd
 </nav>
 </div>
 <!-- Career -->
-<div class="career">
+<div class="career" id="career">
 <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
 	d
 </nav>
 </div>
 </div>
 </body>
+<script type="text/javascript" src="/Portfolio/JS/AboutMe_JS.js"></script>
 </html>
